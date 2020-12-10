@@ -3,6 +3,27 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+
+
+    <servlet>
+        <servlet-name>LogInPage</servlet-name>
+        <jsp-file>/WEB-INF/jsp/log-in.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogInPage</servlet-name>
+        <url-pattern>/log-in</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SignUpPage</servlet-name>
+        <jsp-file>/WEB-INF/jsp/sign-up.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SignUpPage</servlet-name>
+        <url-pattern>/sign-up</url-pattern>
+    </servlet-mapping>
+
+
     <servlet>
         <servlet-name>Controller</servlet-name>
         <servlet-class>controller.Controller</servlet-class>
@@ -11,4 +32,5 @@
         <servlet-name>Controller</servlet-name>
         <url-pattern>/Library/*</url-pattern>
     </servlet-mapping>
+
 </web-app>

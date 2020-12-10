@@ -30,6 +30,15 @@ public class User implements Serializable {
         this.address = address;
     }
 
+    public User() {
+        userId = 0;
+    }
+
+    public User(String login, String password) {
+        this.login = login;
+        this.password = password;
+    }
+
     public int getUserId()
     {
         return userId;

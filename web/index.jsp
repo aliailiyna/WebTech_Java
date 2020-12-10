@@ -12,5 +12,7 @@
   </head>
   <body>
   Система Библиотека.
+  <button><a href="${pageContext.request.contextPath}/log-in">Log in</a></button>
+  <button><a href="${pageContext.request.contextPath}/sign-up">Sign Up</a></button>
   </body>
 </html>
