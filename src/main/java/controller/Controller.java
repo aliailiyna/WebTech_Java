@@ -1,6 +1,5 @@
 package controller;
 
-<<<<<<< HEAD
 import bean.User;
 import service.ClientService;
 import service.factory.ServiceFactory;
@@ -12,14 +11,14 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-public class Controller extends HttpServlet{
+public class Controller extends HttpServlet {
     private final ClientService clientService = ServiceFactory.getInstance().getClientService();
 
     private String dispatch(String url, String destination) {
         return url.substring(0, url.lastIndexOf("/")) + "/" + destination;
     }
 
-    private void signIn(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+    private void logIn(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         HttpSession session = request.getSession();
         var user = new User();
         user.setLogin(request.getParameter("login"));
@@ -47,16 +46,12 @@ public class Controller extends HttpServlet{
         String action = request.getParameter("action");
         switch (action) {
             case "log-in" -> {
-                signIn(request, response);
+                logIn(request, response);
             }
             case "sign-up" -> {
                 signUp(request, response);
             }
         }
     }
-=======
-import javax.servlet.http.HttpServlet;
 
-public class Controller extends HttpServlet{
->>>>>>> 8a241d8a3b22173744448d7a10665f95bfe182e9
 }

@@ -9,13 +9,8 @@ import service.exception.ServiceException;
 
 import java.util.List;
 
-<<<<<<< HEAD
 public class ClientServiceImpl implements ClientService {
     private final UserDAO userDao = DAOFactory.getInstance().getUserDAO();
-=======
-    @Override
-    public void logIn(User user) throws ServiceException {
->>>>>>> 8a241d8a3b22173744448d7a10665f95bfe182e9
 
     private boolean isLoginUnique(User user) throws ServiceException {
         try {
@@ -27,7 +22,7 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-<<<<<<< HEAD
+
     public boolean logIn(User user) throws ServiceException {
         if (user.getLogin().equals("") || user.getPassword().equals("")) {
             throw new ServiceException("Fields can't be empty");
@@ -44,9 +39,6 @@ public class ClientServiceImpl implements ClientService {
             }
         }
     }
-=======
-    public void signUp(User user) throws ServiceException{
->>>>>>> 8a241d8a3b22173744448d7a10665f95bfe182e9
 
     @Override
     public boolean signUp(User user) throws ServiceException{
